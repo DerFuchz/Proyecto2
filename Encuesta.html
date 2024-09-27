@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre el Uso de Cascos</title>
+    <link rel="stylesheet" href="Estilo_Encuesta.css"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+   <!-- Formulario insertado -->
+   <h1>Encuesta sobre la Importancia del Uso de Cascos</h1>
+   <p>Tu opinión es importante para nosotros. Esta encuesta busca entender mejor las percepciones y hábitos sobre el uso de cascos al conducir bicicletas, motocicletas u otros vehículos. ¡Gracias por tu participación!</p>
+
+   <form action="procesar_datos" method="POST">
+       <div class="form-group">
+           <label for="nombre">Nombre:</label>
+           <input type="text" id="nombre" name="nombre" required>
+       </div>
+
+       <div class="form-group">
+           <label for="email">Correo Electrónico:</label>
+           <input type="email" id="email" name="email" required>
+       </div>
+
+        <div class="form-group">
+           <label for="edad">¿Qué edad tienes?</label>
+           <select id="edad" name="edad" required>
+               <option value="">Selecciona una opción</option>
+               <option value="24+">24 años o más</option>
+               <option value="mayor-edad">23-18 años</option>
+               <option value="menor-edad">17-15 años</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="experiencia">¿Cuantos años de experiencia en manejo tienes?</label>
+           <select id="experiencia" name="experiencia" required>
+               <option value="">Selecciona una opción</option>
+               <option value="8+">8 años o más</option>
+               <option value="4-7">7-4 años</option>
+               <option value="2">2 años</option>
+               <option value="ningua">Ninguna</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="uso-casco-frecuencia">¿Con qué frecuencia usas casco al conducir?</label>
+           <select id="uso-casco-frecuencia" name="uso-casco-frecuencia" required>
+               <option value="">Selecciona una opción</option>
+               <option value="siempre">Siempre</option>
+               <option value="casi-siempre">Casi siempre</option>
+               <option value="a-veces">A veces</option>
+               <option value="nunca">Nunca</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="razon-uso">¿Cuál es tu principal razón para usar casco?</label>
+           <select id="razon-uso" name="razon-uso" required>
+               <option value="">Selecciona una opción</option>
+               <option value="seguridad">Seguridad personal</option>
+               <option value="obligacion-legal">Obligación legal</option>
+               <option value="presion-social">Presión social</option>
+               <option value="comodidad">Comodidad</option>
+               <option value="otros">Otros</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="efectividad">¿Crees que el uso del casco reduce significativamente el riesgo de lesiones graves en caso de accidente?</label>
+           <select id="efectividad" name="efectividad" required>
+               <option value="">Selecciona una opción</option>
+               <option value="si">Sí, reduce considerablemente</option>
+               <option value="algo">Sí, pero no en todos los casos</option>
+               <option value="no">No, no lo creo</option>
+               <option value="no-se">No estoy seguro/a</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="multas">¿Sabías que no usar casco en ciertas situaciones puede implicar una multa?</label>
+           <label><input type="radio" name="multas" value="si" required> Sí</label>
+           <label><input type="radio" name="multas" value="no" required> No</label>
+       </div>
+
+       <div class="form-group">
+           <label for="influencia-factores">¿Qué factores influyen más en tu decisión de usar o no un casco? (Puedes seleccionar más de uno)</label>
+           <label><input type="checkbox" name="factores" value="seguridad"> Seguridad</label>
+           <label><input type="checkbox" name="factores" value="precio"> Precio del casco</label>
+           <label><input type="checkbox" name="factores" value="diseno"> Diseño o comodidad</label>
+           <label><input type="checkbox" name="factores" value="clima"> Clima o temperatura</label>
+           <label><input type="checkbox" name="factores" value="presion-social"> Opinión de otros</label>
+           <label><input type="checkbox" name="factores" value="otros"> Otros</label>
+       </div>
+
+       <div class="form-group">
+           <label for="experiencia">¿Has tenido alguna experiencia directa o cercana donde el uso del casco haya prevenido una lesión grave?</label>
+           <textarea id="experiencia" name="experiencia" rows="4" placeholder="Cuéntanos tu experiencia, si la has tenido..."></textarea>
+       </div>
+
+       <div class="form-group">
+           <label for="mejoras">¿Qué mejoras crees que deberían implementarse para fomentar más el uso de cascos?</label>
+           <textarea id="mejoras" name="mejoras" rows="4" placeholder="Tus sugerencias o ideas..."></textarea>
+       </div>
+
+       <input type="submit" value="Enviar Encuesta">
+   </form>
+</body>
+</html>

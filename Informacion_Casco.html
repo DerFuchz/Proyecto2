@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importancia del Uso del Casco</title>
+  <link rel="stylesheet" href="Estilo.css">
+  <link rel="stylesheet" href="Encuesta.html">
+</head>
+<body>
+     <script src="script.js"></script>
+    <div class="Titulo">
+    <h1>La Importancia del Uso del Casco</h1>
+    </div>
+    <div class="Contenido">
+    <p>El casco es un elemento fundamental para protegernos mientras conducimos bicicletas, motocicletas u otros vehículos. Su uso adecuado puede marcar la diferencia entre la vida y la muerte en un accidente. Además de ser un requisito legal en muchas jurisdicciones, el casco ofrece protección contra lesiones graves, especialmente en la cabeza, lo cual es vital para reducir los riesgos de traumas cerebrales.</p>
+
+    <p>Es crucial que siempre utilices un casco certificado y que lo ajustes correctamente para garantizar la mayor protección posible. Recuerda que usar un casco es una inversión en tu seguridad y en la de los demás.</p>
+</div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-Sa5GnpxtjE" 
+        title="Video sobre el uso del casco" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+        <h1>Encuesta sobre la Importancia del Uso de Cascos</h1>
+   <p>Tu opinión es importante para nosotros. Esta encuesta busca entender mejor las percepciones y hábitos sobre el uso de cascos al conducir bicicletas, motocicletas u otros vehículos. ¡Gracias por tu participación!</p>
+
+   <form action="Basecascos.php" method="POST">
+       <div class="form-group">
+           <label for="nombre">Nombre:</label>
+           <input type="text" id="nombre" name="nombre" required>
+       </div>
+
+       <div class="form-group">
+           <label for="email">Correo Electrónico:</label>
+           <input type="email" id="email" name="email" required>
+       </div>
+
+        <div class="form-group">
+           <label for="edad">¿Qué edad tienes?</label>
+           <select id="edad" name="edad" required>
+               <option value="">Selecciona una opción</option>
+               <option value="24+">24 años o más</option>
+               <option value="mayor-edad">23-18 años</option>
+               <option value="menor-edad">17-15 años</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="experiencia">¿Cuantos años de experiencia en manejo tienes?</label>
+           <select id="experiencia" name="experiencia" required>
+               <option value="">Selecciona una opción</option>
+               <option value="8+">8 años o más</option>
+               <option value="4-7">7-4 años</option>
+               <option value="2">2 años</option>
+               <option value="ningua">Ninguna</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="uso-casco-frecuencia">¿Con qué frecuencia usas casco al conducir?</label>
+           <select id="uso-casco-frecuencia" name="uso-casco-frecuencia" required>
+               <option value="">Selecciona una opción</option>
+               <option value="siempre">Siempre</option>
+               <option value="casi-siempre">Casi siempre</option>
+               <option value="a-veces">A veces</option>
+               <option value="nunca">Nunca</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="razon-uso">¿Cuál es tu principal razón para usar casco?</label>
+           <select id="razon-uso" name="razon-uso" required>
+               <option value="">Selecciona una opción</option>
+               <option value="seguridad">Seguridad personal</option>
+               <option value="obligacion-legal">Obligación legal</option>
+               <option value="presion-social">Presión social</option>
+               <option value="comodidad">Comodidad</option>
+               <option value="otros">Otros</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="efectividad">¿Crees que el uso del casco reduce significativamente el riesgo de lesiones graves en caso de accidente?</label>
+           <select id="efectividad" name="efectividad" required>
+               <option value="">Selecciona una opción</option>
+               <option value="si">Sí, reduce considerablemente</option>
+               <option value="algo">Sí, pero no en todos los casos</option>
+               <option value="no">No, no lo creo</option>
+               <option value="no-se">No estoy seguro/a</option>
+           </select>
+       </div>
+
+       <div class="form-group">
+           <label for="multas">¿Sabías que no usar casco en ciertas situaciones puede implicar una multa?</label>
+           <label><input type="radio" name="multas" value="si" required> Sí</label>
+           <label><input type="radio" name="multas" value="no" required> No</label>
+       </div>
+
+       <div class="form-group">
+           <label for="influencia-factores">¿Qué factores influyen más en tu decisión de usar o no un casco? (Puedes seleccionar más de uno)</label>
+           <label><input type="checkbox" name="factores" value="seguridad"> Seguridad</label>
+           <label><input type="checkbox" name="factores" value="precio"> Precio del casco</label>
+           <label><input type="checkbox" name="factores" value="diseno"> Diseño o comodidad</label>
+           <label><input type="checkbox" name="factores" value="clima"> Clima o temperatura</label>
+           <label><input type="checkbox" name="factores" value="presion-social"> Opinión de otros</label>
+           <label><input type="checkbox" name="factores" value="otros"> Otros</label>
+             <script>
+        function seleccionarUno(clickedCheckbox) {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox !== clickedCheckbox) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+    </script>
+       </div>
+
+
+       <div class="form-group">
+           <label for="experiencia">¿Has tenido alguna experiencia directa o cercana donde el uso del casco haya prevenido una lesión grave?</label>
+           <textarea id="experiencia" name="experiencia" rows="4" placeholder="Cuéntanos tu experiencia, si la has tenido..."></textarea>
+       </div>
+
+       <div class="form-group">
+           <label for="mejoras">¿Qué mejoras crees que deberían implementarse para fomentar más el uso de cascos?</label>
+           <textarea id="mejoras" name="mejoras" rows="4" placeholder="Tus sugerencias o ideas..."></textarea>
+       </div>
+
+       <input type="submit" value="Enviar Encuesta">
+   </form>
+    <header>
+        <h1>La Importancia del Uso del Casco</h1>
+        <nav id="navbar">
+            <ul class="Menu_horizontal">
+                <li><a href="#importancia">Importancia</a></li>
+                <li><a href="#tipos">Tipos de Cascos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#normativas">Normativas</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#estadisticas">Estadísticas</a></li>
+                <li><a href="#accion">Llamado a la Acción</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="importancia">
+            <h2>¿Por qué es vital usar un casco?</h2>
+            <p>El uso del casco reduce significativamente el riesgo de lesiones y muertes en accidentes de motocicleta.</p>
+            <p>Los cascos pueden reducir el riesgo de lesiones cerebrales en un 70%.</p>
+        </section>
+
+        <section id="tipos">
+            <h2>Tipos de Cascos</h2>
+            <ul>
+                <li><strong>Cascos Integrales:</strong> Ofrecen la máxima protección.</li>
+                <li><strong>Cascos Modulares:</strong> Combinan características de cascos integrales y abiertos.</li>
+                <li><strong>Cascos Abiertos:</strong> Son ligeros y permiten mayor ventilación.</li>
+            </ul>
+        </section>
+
+        <section id="beneficios">
+            <h2>Beneficios Adicionales</h2>
+            <p>Los cascos no solo ofrecen protección, sino que también son cómodos y estilosos. Muchos modelos incluyen características como viseras anti-empañantes y comunicación Bluetooth.</p>
+        </section>
+
+        <section id="normativas">
+            <h2>Normativas y Recomendaciones</h2>
+            <p>Asegúrate de que tu casco cumpla con las normativas de seguridad y revísalo regularmente para detectar signos de desgaste.</p>
+        </section>
+
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+            <blockquote>
+                <p>"Gracias al casco, sobreviví a un accidente que podría haber sido fatal."</p>
+                <footer>- Motociclista Anónimo</footer>
+            </blockquote>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Datos y Estadísticas</h2>
+            <p>En 2020, el 29% de los motociclistas fallecidos no llevaban casco. Los estados con leyes de casco han visto una reducción del 40% en muertes de motociclistas.</p>
+        </section>
+
+        <section id="accion">
+            <h2>Llamado a la Acción</h2>
+            <p><a href="http://listado.mercadolibre.com.mx/casco-para-moto-deportiva-chidos">Compra un casco</a> de calidad hoy mismo y comparte esta información para crear conciencia sobre la seguridad en motocicletas.</p>
+        </section>
+    </main>
+
+    <main>
+        <div class="stats">
+            <h2>Tipos de Cascos y Estadísticas de Salvamento</h2>
+            <ul>
+                <li>
+                    <strong>Casco Integral</strong>
+                    <span>Reduce lesiones en un 70%, siendo el más efectivo para salvar vidas.</span>
+                </li>
+                <li>
+                    <strong>Casco Jet (Cali-Mero)</strong>
+                    <span>Ofrece buena ventilación, salvando vidas en un 50% de los casos.</span>
+                </li>
+                <li>
+                    <strong>Casco Abatible</strong>
+                    <span>Combina protección y comodidad, salvando vidas en un 60% de los accidentes.</span>
+                </li>
+                <li>
+                    <strong>Casco Clásico</strong>
+                    <span>Proporciona una protección básica, con un 40% de efectividad en la reducción de lesiones.</span>
+                </li>
+                <li>
+                    <strong>Casco Off-Road</strong>
+                    <span>Ideal para terrenos difíciles, salvando vidas en un 65% de los accidentes.</span>
+                </li>
+                <li>
+                    <strong>Casco Trial</strong>
+                    <span>Diseñado para maniobras, ha mostrado una efectividad del 55% en la reducción de lesiones.</span>
+                </li>
+                <li>
+                    <strong>Casco Trail</strong>
+                    <span>Versátil y ha salvado vidas en un 62% de los accidentes en rutas mixtas.</span>
+                </li>
+                <li>
+                    <strong>Casco Dual</strong>
+                    <span>Combinación entre cascos integrales y off-road, con una efectividad del 68% en salvar vidas.</span>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+</body>
+</html>
+     
